@@ -1,24 +1,42 @@
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# Python environment folders
-venv/
-env/
-.venv/
-
-# Python cache
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+*.so
 
-# OS files
+# VSCode settings
+.vscode/
+
+# Environment files
+.env
+*.env
+
+# Python virtual environments
+pyvenv.cfg
+env/
+venv/
+ENV/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+app/.ipynb_checkpoints/
+app/.gitignore
+# OS generated files
 .DS_Store
 Thumbs.db
 
 # Log files
 *.log
 
-# Environment variables file
-.env
+# CSV or other data files
+*.csv
 
-# VSCode settings (optional)
-.vscode/
+# Miscellaneous
+*.swp
+groq.ipynb
+etc/jupyter/nbconfig.data
+include/
+lib/
+Scripts/
+share/
+

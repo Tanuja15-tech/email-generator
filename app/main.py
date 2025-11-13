@@ -29,7 +29,8 @@ df = load_portfolio()
 
 # ---- Initialize Vector DB ----
 ef = embedding_functions.DefaultEmbeddingFunction()
-client = chromadb.PersistentClient("vectorstore")
+client = chromadb.Client()
+
 collection = client.get_or_create_collection(name="portfolio", embedding_function=ef)
 
 # Add portfolio to vector DB if empty
@@ -118,3 +119,39 @@ if st.button("Generate Email ✨"):
         st.write(res_email.content)
 
         st.success("✅ Done!")
+# import chromadb
+# print("ChromaDB version:", chromadb.__version__)
+
+# import chromadb
+# from chromadb.utils import embedding_functions
+
+# print("🔍 Testing ChromaDB setup...")
+
+# # Initialize
+# ef = embedding_functions.DefaultEmbeddingFunction()
+# client = chromadb.Client()
+
+# # Create or load test collection
+# collection = client.get_or_create_collection(
+#     name="test_collection",
+#     embedding_function=ef
+# )
+
+# Add some test data
+# collection.add(
+#     documents=[
+#         "Artificial Intelligence helps automate tasks",
+#         "Cold emails can improve business outreach",
+#         "Python is great for machine learning projects"
+#     ],
+#     ids=["1", "2", "3"]
+# )
+
+# # Query
+# result = collection.query(
+#     query_texts=["What helps in automation?"],
+#     n_results=2
+# )
+
+# print("✅ Query successful! Here are your results:")
+# print(result)
